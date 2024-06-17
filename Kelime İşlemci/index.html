@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelime İşlemci</title>
+    <link rel="stylesheet" href="styles.css">
+ <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    }
+
+   .editor-container {
+     width: 80%;
+     max-width: 800px;
+     background-color: #fff;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .toolbar {
+     border-bottom: 1px solid #ccc;
+     padding: 10px;
+     background-color: #f9f9f9;
+     text-align: center;
+    }
+
+    .toolbar button {
+     background-color: #fff;
+     border: 1px solid #ccc;
+     border-radius: 3px;
+     padding: 5px 10px;
+     margin: 0 2px;
+     cursor: pointer;
+     font-size: 16px;
+    }
+
+    #metin {
+     padding: 20px;
+     min-height: 300px;
+     max-height: 600px;
+     overflow-y: auto;
+    }
+
+</style>
+
+</head>
+<body>
+    <div class="editor-container">
+        <div class="toolbar">
+            <button onclick="islem('kalin')"><b>Bold</b></button>
+            <button onclick="islem('italik')"><i>Italic</i></button>
+            <button onclick="islem('alticizili')"><u>Underline</u></button>
+            <button onclick="islem('ustucizili')"><s>Strike</s></button>
+            <button onclick="islem('solayasli')">Left</button>
+            <button onclick="islem('merkezyasli')">Center</button>
+            <button onclick="islem('sagayasli')">Right</button>
+            <input type="color" id="renksecici" name="colorPicker" value="#ff0000">
+            
+        </div>
+        <div id="metin" contenteditable="true"></div>
+        <h2 id="metinhtml"></h2>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
